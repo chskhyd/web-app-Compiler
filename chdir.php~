@@ -1,0 +1,30 @@
+<?php
+//session_start();
+
+$username=$_SESSION['sess_user'];
+echo " hello ".$username;
+
+if(file_exists("../contents/2 IT/$username"))
+{
+	chdir("../contents/2 IT/$username");
+	echo getcwd();
+}
+else if(file_exists("../contents/3 IT/$username"))
+{
+	chdir("../contents/3 IT/$username");
+	echo getcwd();
+	
+} 
+
+else if(file_exists("../contents/4 IT/$username"))
+{	
+	
+	chdir("../contents/4 IT/$username");
+	 echo getcwd();
+
+} 
+else
+      echo "Invalid Login";
+
+
+?>
